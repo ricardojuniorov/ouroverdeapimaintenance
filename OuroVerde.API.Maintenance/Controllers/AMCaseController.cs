@@ -30,6 +30,7 @@ namespace OuroVerde.API.Maintenance.Controllers
         {
             try
             {
+
                 if (string.IsNullOrEmpty(contaFornecedor))
                 {
                     return BadRequest("O campo 'conta do fornecedor' deve ser preenchido");
