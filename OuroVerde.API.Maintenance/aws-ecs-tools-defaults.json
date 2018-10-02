@@ -1,0 +1,23 @@
+
+{
+    "region" : "sa-east-1",
+    "profile" : "default",
+    "configuration" : "Release",
+    "tag"           : "ouroverdeapimaintenance:latest",
+    "cluster"       : "clustermaintenance",
+    "launch-type"   : "EC2",
+    "task-definition-name" : "TaskDefMaintenance",
+    "task-definition-network-mode" : "bridge",
+    "container-name"               : "APIContainer",
+    "container-memory-hard-limit"  : 300,
+    "container-memory-soft-limit"  : 128,
+    "container-port-mapping"       : "80:80",
+    "container-environment-variables" : "\"ASPNETCORE_ENVIRONMENT\"=\"Production\"",
+    "skip-image-push"                 : false,
+    "cluster-service"                 : "maintenanceService",
+    "desired-count"                   : 1,
+    "deployment-minimum-healthy-percent" : 100,
+    "deployment-maximum-percent"         : 200,
+    "placement-strategy"                 : "spread=attribute:ecs.availability-zone,spread=instanceId",
+    "vstoolkit-deployment-mode"          : "DeployService"
+}

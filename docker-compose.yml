@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ouroverde.api.maintenance:
+    image: ouroverdeapimaintenance
+    build:
+      context: .
+      dockerfile: OuroVerde.API.Maintenance/Dockerfile
